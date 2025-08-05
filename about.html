@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div id="about">
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="Portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="web-development.png">
+                </div>
+            
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I’m passionate and creative web developer with a focus on building clean, responsive, and user-friendly websites.I specialize in front-end development using HTML, CSS, JavaScript, and modern libraries and platforms like Wix, WordPress, and Bootstrap. Whether it’s a simple portfolio, a business website, or a complete e-commerce solution, I enjoy turning ideas into interactive and functional websites.<br>Whether you're looking for a simple landing page, a responsive business website, or a powerful e-commerce store, I have the skills and tools to bring your vision to life.</p>
+                
+                <div class="tab-titles">
+    <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+    <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
+    <p class="tab-links" onclick="opentab('education', event)">Education</p>
+</div>
+
+<div class="tab-contents active-tab" id="skills">
+    <ul>
+        <li><span>Web designer</span><br>Website design and layout</li>
+        <li><span>Web development</span><br>HTML, CSS, JavaScript, ReactJs</li>
+        <li><span>Customization & SEO</span><br>Wix, WordPress, Shopify</li>
+    </ul>
+</div>
+
+<div class="tab-contents" id="experience">
+    <ul>
+        <li><span>Accounts Assistant</span><br>Karachi Chamber of Commerce & Industries<br>2010-2011</li>
+        <li><span>Accounts Assistant</span><br>World Orient Trading Company<br>2007-2009</li>
+        <li><span>Accounts Assistant</span><br>QFS Group of Companies<br>2006-2007</li>
+    </ul>
+</div>
+
+<div class="tab-contents" id="education">
+    <ul>
+        <li><span>MBA-Finance</span><br>University of Sindh Jamshoro<br>2003-2004</li>
+        <li><span>Bachelor in Science</span><br>University of Sindh Jamshoro<br>2001-2002</li>
+    </ul>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname, event) {
+        for (let tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (let tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+
+
+        </body>
+</html> 
